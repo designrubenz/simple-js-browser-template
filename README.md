@@ -14,6 +14,7 @@ This is a gulpfile that simply works, is easy to understand and aimed at webdeve
 * includes various icon references for touch devices and a favicon.ico as a reminder
 
 **directory structure**
+
 `/src`: put all your code and images here. Be careful not to put code into 'src/js/main.js' (s. below).
 `/build`: will contain all the files ready for production. To automatically generate them, use `gulp production`.
 

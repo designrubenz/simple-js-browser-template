@@ -24,7 +24,7 @@ This is a gulpfile that simply works, is easy to understand and aimed at webdeve
 * `gulp`: starts the server (using browsersync so that you can easily test your sites on all devices available). Refreshes the browsers automatically when you edit and save your scss, js or index.html files. Use this command while working on your project.
 * `gulp production`: generates and copies all the files you need for deployment into the build folder
 * `gulp clear`: deletes all files in your build folder
-* `gulp psi`: tests the speed of your site with google page speed (make sure to edit the name of your live site in your gulpfile)
+* `gulp pagespeed`: tests the speed of your site with google page speed (make sure to edit the name of your live site in your gulpfile)
 * `gulp lint` checks your JS-code (and is invoked every time you change any of your JS-files)
 
 **JS files**

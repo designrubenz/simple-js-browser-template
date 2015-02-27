@@ -13,7 +13,9 @@ This is a gulpfile that simply works, is easy to understand and aimed at webdeve
 * tests the pagespeed of your site
 * includes various icon references for touch devices and a favicon.ico as a reminder
 
-** directory structure **
+**directory structure**
+`/src`: put all your code and images here. Be careful not to put code into 'src/js/main.js' (s. below).
+`/build` will automatically create all the files ready for production
 
 
 **gulp commands**

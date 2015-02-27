@@ -16,6 +16,7 @@ This is a gulpfile that simply works, is easy to understand and aimed at webdeve
 **directory structure**
 
 `/src`: put all your code and images here. Be careful not to put code into 'src/js/main.js' (s. below).
+
 `/build`: will contain all the files ready for production. To automatically generate them, use `gulp production`.
 
 

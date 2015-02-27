@@ -4,7 +4,7 @@
 This is a gulpfile that simply works, is easy to understand and aimed at webdevelopers starting a new website project - without the fancy stuff (yes, I am talking about you, Browserifiers).
 
 **What it does for you**
-* uses sass (supporting the scss-syntax) and minifying your css for production
+* uses sass (supporting the scss-syntax) and minifies your css for production
 * autoprefixes your css-file depending on your choice of browsers you want to support
 * autorefreshes browsers and brower-synchronizing
 * concatenates, minifies and lints your js-files

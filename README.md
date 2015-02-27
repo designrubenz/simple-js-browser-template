@@ -13,6 +13,9 @@ This is a gulpfile that simply works, is easy to understand and aimed at webdeve
 * tests the pagespeed of your site
 * includes various icon references for touch devices and a favicon.ico as a reminder
 
+** directory structure **
+
+
 **gulp commands**
 * `gulp`: starts the server (using browsersync so that you can easily test your sites on all devices available). Refreshes the browsers automatically when you edit and save your scss, js or index.html files.
 * `gulp production`: generates and copies all the files you need for deployment into the build folder
@@ -23,6 +26,7 @@ This is a gulpfile that simply works, is easy to understand and aimed at webdeve
 
 All js-files in your 'src/js' folder get concatenated into 'src/js/main.js'. JS-files in 'src/js/lib' will appear first.
 
-
+** Wanna contribute? **
+Please help me to make the gulpfile more readable. New tasks and features, however, will most likely not be added in order to keep things simple (and comply with the repository's name).
 
 

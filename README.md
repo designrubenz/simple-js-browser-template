@@ -20,6 +20,7 @@ This is a gulpfile that simply works, is easy to understand and aimed at webdeve
 * `gulp psi`: tests the speed of your site with google page speed (make sure to edit the name of your live site in your gulpfile)
 
 **js files**
+
 All js-files in your 'src/js' folder get concatenated into 'src/js/main.js'. JS-files in 'src/js/lib' will appear first.
 
 

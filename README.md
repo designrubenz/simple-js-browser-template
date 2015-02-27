@@ -6,7 +6,7 @@ This is a gulpfile that simply works, is easy to understand and aimed at webdeve
 **What it does for you**
 * uses sass (supporting the scss-syntax) and minifies your css for production
 * autoprefixes your css-file depending on your choice of browsers you want to support
-* autorefreshes browsers and brower-synchronizing
+* autorefreshes browsers and brower-synchronisation
 * concatenates, minifies and lints your js-files
 * creates all the files needed for production in the build directory
 * minifies images (jpg, png, jpg, svg)

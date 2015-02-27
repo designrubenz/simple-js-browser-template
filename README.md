@@ -26,7 +26,7 @@ This is a gulpfile that simply works, is easy to understand and aimed at webdeve
 
 All js-files in your 'src/js' folder get concatenated into 'src/js/main.js'. JS-files in 'src/js/lib' will appear first.
 
-** Wanna contribute? **
-Please help me to make the gulpfile more readable. New tasks and features, however, will most likely not be added in order to keep things simple (and comply with the repository's name).
+**Wanna contribute?**
+I would highly appreciate your contributions. Especially, please help me to make the gulpfile more readable and more quality JS. New tasks and features, however, will most likely not be added in order to keep things simple (and in line with the repository's name).
 
 

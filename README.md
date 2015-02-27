@@ -31,9 +31,9 @@ All JS-files in your 'src/js' folder get concatenated into 'src/js/main.js'. JS-
 
 **Wanna contribute?**
 
-I would highly appreciate your contributions. Especially, please help me to make the gulpfile more readable and more quality JS. New tasks and features, however, will most likely not be added in order to keep things simple (and in line with the repository's name).
+I would highly appreciate your contributions. Especially, please help me to make the gulpfile more readable and more quality code (read: real JS). New tasks and features, however, will most likely not be added in order to keep things simple (and in line with the repository's name).
 
 **Credits**
-The idiot's gulpfile is based on Google's [web-starter-kit](https://github.com/google/web-starter-kit) and [greypants' gulp starter](https://github.com/greypants/gulp-starter). Thank you for your great work!
+The idiot's gulpfile is based on Google's [web-starter-kit](https://github.com/google/web-starter-kit) and [greypants' gulp starter](https://github.com/greypants/gulp-starter). Thank you for your great work and inspiration!
 
 

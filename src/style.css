@@ -46,12 +46,16 @@ html, body, button {
 html {
   font-family: 'Open Sans', sans-serif; }
 
-body {
-  padding: 0.8em; }
-
 h1 {
+  background-color: #99bf0d;
+  color: #fae005;
   font-size: 2em;
-  padding-bottom: 0.5em; }
+  padding: 0.25em;
+  border-bottom: 1px #999 solid;
+  margin-bottom: 0.25em; }
+
+p {
+  padding: 0.5em; }
 
 body {
   color: #555; }

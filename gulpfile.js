@@ -1,36 +1,36 @@
 var dest      = "./build",
-    src       = './src'
+    src       = './src',
     notjssrc  = '!' + src + '/js/main.js';
 
-var gulp        = require('gulp');
-var browserSync = require('browser-sync');
-var sass        = require('gulp-sass');
-var reload      = browserSync.reload;
-var concat      = require('gulp-concat');
-var uglify      = require('gulp-uglify');
-var imagemin    = require('gulp-imagemin');
-var pngquant    = require('imagemin-pngquant');
-var autoprefixer= require('gulp-autoprefixer');
-var pagespeed   = require('psi');
-var del         = require('del');
-var jshint      = require('gulp-jshint');
-var stylish     = require('jshint-stylish');
-var plumber     = require('gulp-plumber');
+var gulp         = require('gulp');
+var browserSync  = require('browser-sync');
+var sass         = require('gulp-sass');
+var reload       = browserSync.reload;
+var concat       = require('gulp-concat');
+var uglify       = require('gulp-uglify');
+var imagemin     = require('gulp-imagemin');
+var pngquant     = require('imagemin-pngquant');
+var autoprefixer = require('gulp-autoprefixer');
+var pagespeed    = require('psi');
+var del          = require('del');
+var jshint       = require('gulp-jshint');
+var stylish      = require('jshint-stylish');
+var plumber      = require('gulp-plumber');
 
 var AUTOPREFIXER_BROWSERS = [
-  'ie >= 8',
-  'ie_mob >= 8',
-  'ff >= 30',
-  'chrome >= 34',
-  'safari >= 7',
-  'opera >= 23',
-  'ios >= 7',
-  'android >= 4.4',
-  'bb >= 10'
+    'ie >= 8',
+    'ie_mob >= 8',
+    'ff >= 30',
+    'chrome >= 34',
+    'safari >= 7',
+    'opera >= 23',
+    'ios >= 7',
+    'android >= 4.4',
+    'bb >= 10'
 ];
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function() {
+gulp.task('serve', ['sass'], function () {
     browserSync({
         server: src
     });
@@ -40,7 +40,7 @@ gulp.task('serve', ['sass'], function() {
 });
 
 // Compile sass into CSS & auto-inject into browsers
-gulp.task('sass', function() {
+gulp.task('sass', function () {
     return gulp.src(src +  "/sass/*.scss")
         .pipe(plumber({
             errorHandler: function (err) {
@@ -63,7 +63,7 @@ gulp.task('js', ['jslint'], function() {
 });
 
 // JSlint
-gulp.task('jslint', function() {
+gulp.task('jslint', function () {
   return gulp.src([src + '/js/*.js', notjssrc])
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'));

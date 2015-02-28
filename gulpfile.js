@@ -18,46 +18,46 @@ var stylish      = require('jshint-stylish');
 var plumber      = require('gulp-plumber');
 
 var AUTOPREFIXER_BROWSERS = [
-    'ie >= 8',
-    'ie_mob >= 8',
-    'ff >= 30',
-    'chrome >= 34',
-    'safari >= 7',
-    'opera >= 23',
-    'ios >= 7',
-    'android >= 4.4',
-    'bb >= 10'
+  'ie >= 8',
+  'ie_mob >= 8',
+  'ff >= 30',
+  'chrome >= 34',
+  'safari >= 7',
+  'opera >= 23',
+  'ios >= 7',
+  'android >= 4.4',
+  'bb >= 10'
 ];
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function () {
-    browserSync({
-        server: src
-    });
-    gulp.watch(src + "/sass/*.scss", ['sass']);
-    gulp.watch([src + "/js/**/*.js", notjssrc], ['js']);
-    gulp.watch(src + "/*.html").on('change', reload);
+  browserSync({
+    server: src
+  });
+  gulp.watch(src + "/sass/*.scss", ['sass']);
+  gulp.watch([src + "/js/**/*.js", notjssrc], ['js']);
+  gulp.watch(src + "/*.html").on('change', reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function () {
-    return gulp.src(src +  "/sass/*.scss")
-        .pipe(plumber({
-            errorHandler: function (err) {
-                console.log(err);
-                this.emit('end');
-            }
-        }))
-        .pipe(sass())
-        .pipe(autoprefixer({browsers: ['chrome >= 40']}))
-        .pipe(gulp.dest(src))
-        .pipe(reload({stream: true}))
+  return gulp.src(src +  "/sass/*.scss")
+    .pipe(plumber({
+      errorHandler: function (err) {
+        console.log(err);
+        this.emit('end');
+      }
+    }))
+    .pipe(sass())
+    .pipe(autoprefixer({browsers: ['chrome >= 40']}))
+    .pipe(gulp.dest(src))
+    .pipe(reload({stream: true}))
 });
 
 // Lint JS first, then concat and minify
-gulp.task('js', ['jslint'], function() {
-  return gulp.src([src + '/js/lib/*.js', src + '/js/*.js', notjssrc])
-    .pipe(concat('main.js'))
+gulp.task('js', ['jslint'], function () {
+  return gulp.src([src + '/js/lib/*.js', src + '/js/*.js', notjssrc])
+    .pipe(concat('main.js'))
     .pipe(gulp.dest(src + '/js/'))
     .pipe(reload({stream: true}));
 });
@@ -70,7 +70,7 @@ gulp.task('jslint', function () {
 });
 
 // Preparing files for production: First, run the 'js' task, afterwards ...
-gulp.task('production', ['js'], function() {
+gulp.task('production', ['js'], function () {
   // compress CSS
   gulp.src(src + "/sass/*.scss")
     .pipe(sass({ outputStyle: 'compressed' }))

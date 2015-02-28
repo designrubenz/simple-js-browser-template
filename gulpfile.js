@@ -15,6 +15,7 @@ var pagespeed   = require('psi');
 var del         = require('del');
 var jshint      = require('gulp-jshint');
 var stylish     = require('jshint-stylish');
+var plumber     = require('gulp-plumber');
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 8',
@@ -40,11 +41,17 @@ gulp.task('serve', ['sass'], function() {
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src(src + "/sass/*.scss")
+    return gulp.src(src +  "/sass/*.scss")
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
         .pipe(sass())
         .pipe(autoprefixer({browsers: ['chrome >= 40']}))
         .pipe(gulp.dest(src))
-        .pipe(reload({stream: true}));
+        .pipe(reload({stream: true}))
 });
 
 // Lint JS first, then concat and minify

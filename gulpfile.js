@@ -88,10 +88,10 @@ gulp.task('production', ['js'], function () {
   // compress images
   return gulp.src(src + '/images/*')
     .pipe(imagemin({
-        progressive: true,
-        interlaced: true,
-        svgoPlugins: [{removeViewBox: false}],
-        use: [pngquant()]
+      progressive: true,
+      interlaced: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngquant()]
     }))
     .pipe(gulp.dest(dest + '/images/'));
 });
@@ -103,7 +103,7 @@ gulp.task('clear', del.bind(null, [dest + '/**/*'], {dot: true}));
 gulp.task('pagespeed', function (cb) {
   // Update the below URL to the public URL of your site
   pagespeed.output('example.com', {
-    strategy: 'mobile',
+    strategy: 'mobile'
     // By default we use the PageSpeed Insights free (no API key) tier.
     // Use a Google Developer API key if you have one: http://goo.gl/RkN0vE
     // key: 'YOUR_API_KEY'

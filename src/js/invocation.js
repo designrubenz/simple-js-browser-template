@@ -1,4 +1,3 @@
-
 var MyObject = {
  
   counter: 0,
@@ -10,5 +9,4 @@ var MyObject = {
 
 MyObject.plus();
 MyObject.plus();
-
 

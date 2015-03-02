@@ -81,7 +81,7 @@ gulp.task('production', ['js'], function () {
     .pipe(uglify())
     .pipe(gulp.dest(dest + '/js/'));
   // copy index.html, favicon.ico and touch-icon-images
-  gulp.src([src + '/*', "!" + src + "/style.css"])
+  gulp.src([src + '/*', "!" + src + "/style.css", "!" + src + "/sass"])
     .pipe(gulp.dest(dest));
   gulp.src(src + '/images/icons-touch/*')
     .pipe(gulp.dest(dest + '/images/icons-touch'));
